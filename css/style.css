@@ -1,0 +1,110 @@
+@font-face {
+    font-family: robotoMono;
+    src: url(../font/RobotoMono-VariableFont_wght.ttf);
+}
+*,*::before,*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* pas sur de cet propriete */
+    overflow-x: hidden;
+
+}
+
+:root{
+    --clr-btn: #ffd400;
+    --backgd-yellow: #ffd400;
+    --clr-text-accent: #e6110d;
+    --backgd-black: #000;
+    --font-roboto: robotoMono;
+}
+
+/* header */
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+/* main */
+
+
+/* section hero */
+main #section__hero {
+    font-family: var(--font-roboto);
+}
+main #section__hero img{
+    height: 100vh;
+}
+main section #figure__hero{
+    background-color: #000;
+    color: #fff;
+    width: 70%;
+    padding: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    min-width: 300px;
+}
+main #section__hero #fig__subtitle{
+    font-size: 1rem;
+}
+main #section__hero #fig__title{
+    font-size: 1.5rem;
+}
+main #section__hero #fig__text{
+    margin: 1rem 0;
+    line-height: 1.5rem;
+    font-size: .7rem;
+}
+/* section artist */
+
+/* section news */
+main #section__news{
+    background-color: var(--backgd-yellow);
+}
+/* other news */
+main #other__news {
+    background-color: #fff;
+    font-family:var(--font-roboto);
+}
+main #other__news .container h3 span{
+    color: var(--clr-text-accent);
+}
+/* date concert */
+#section__date{
+    background-color: var(--backgd-black);
+    color: #fff;
+}
+/* discography */
+#section__discography{
+
+}
+/* footer */
+footer{
+    background-color: var(--backgd-yellow);
+}
+/* réutilisable */
+.btn__yellow{
+    font-weight: 700;
+    font-size: 1rem;
+    background-color: var(--clr-btn);
+    color: #000;
+    padding: .7rem 1rem;
+    width: fit-content;
+}
+.container{
+    width: 78%;
+    margin: 0 auto;
+}
+.relative{
+    position: relative;;
+}
+.dispNone{
+    display: none;
+}
+.img{
+    width: 100%;
+}
