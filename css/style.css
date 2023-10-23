@@ -211,6 +211,7 @@ footer .container ul li{
     padding: .7rem 1rem;
     width: fit-content;
     text-transform: capitalize;
+    border: none;
 
 }
 
