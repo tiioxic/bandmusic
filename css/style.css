@@ -2,17 +2,21 @@
     font-family: robotoMono;
     src: url(../font/RobotoMono-VariableFont_wght.ttf);
 }
-*,*::before,*::after{
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    /* pas sur de cet propriete */
-    overflow-x: hidden;
+
 }
-body{
+
+body {
     font-family: var(--font-roboto);
 }
-:root{
+
+:root {
     --clr-btn: #ffd400;
     --backgd-yellow: #ffd400;
     --clr-text-accent: #e6110d;
@@ -21,149 +25,289 @@ body{
 }
 
 /* header */
-header{
-    display:flex;
+header {
+    display: flex;
+    gap: 5rem;
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
 }
 
+header #menuOpen {
+    position: absolute;
+    top: 6rem;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    
+}
+header #menuOpen ul li {
+    padding: .5rem 0;
+    list-style: none;
+}
+header #menuOpen ul li a{
+    color: #000;
+    text-decoration: none;
+}
 /* main */
+
 
 
 /* section hero */
 main #section__hero {
     font-family: var(--font-roboto);
+    overflow-x: hidden;
 }
-main #section__hero img{
+
+main #section__hero img {
     height: 100vh;
+    
 }
-main section #figure__hero{
+
+main section #figure__hero {
     background-color: #000;
     color: #fff;
     width: 70%;
     padding: 1rem;
     position: absolute;
+    z-index: 1;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -70%);
     min-width: 300px;
 }
-main section #figure__hero img{
-    width: fit-content;
+
+main section #figure__hero img {
     height: fit-content;
 
 }
-.fig__content{
-    width: 50%;
-}
-main #section__hero #fig__subtitle{
+
+main #section__hero #fig__subtitle {
     font-size: 1rem;
 }
-main #section__hero #fig__title{
+
+main #section__hero #fig__title {
     font-size: 1.5rem;
 }
-main #section__hero #fig__text{
+
+main #section__hero #fig__text {
     margin: 1rem 0;
     line-height: 1.5rem;
     font-size: .7rem;
 }
+
 /* section media */
-main #section__media .container li i {
+
+main #section__media .container i {
     color: #fff;
     background-color: #000;
-    padding:  1.5rem 2rem;
+    padding: 1.5rem 2rem;
     width: fit-content;
     font-size: 1.3rem;
-    
+    margin: .7rem 0;
+
 }
 
 /* section artist */
 main #section__artist {
-  text-align: center;
+    text-align: center;
 }
+
+main #section__artist #artist__card .figure__stars {
+    margin: 4rem 0;
+}
+
 /* section news */
-main #section__news{
+main #section__news {
     background-color: var(--backgd-yellow);
 }
+
 main #section__news .container figure {
     text-align: left;
     margin: 2rem 0;
 }
+
 /* other news */
 main #other__news .container {
     text-align: left;
 }
-main #other__news .container h3 span{
+
+main #other__news .container h3 span {
     color: var(--clr-text-accent);
 }
-main #other__news .container h2{
+
+main #other__news .container h2 {
     font-size: 1rem;
 }
-main #other__news .container h3{
+
+main #other__news .container h3 {
     padding: 2rem 0;
     font-size: 1.5rem;
 }
 
 /* date concert */
-#section__date{
+main #section__date {
     background-color: var(--backgd-black);
     color: #fff;
 }
-#section__date .container div{
-    margin: 2rem 0;
-}
-/* discography */
-#section__discography{
 
+.content__dates{
+    padding: 3rem 0;
 }
+ .content__dates a{
+    line-height: 5rem;
+    text-decoration: none;
+}
+
+/* discography */
+#section__discography figure{
+    margin-bottom: 3rem;
+}
+#section__discography figure .btn__yellow{
+    margin: 0 auto;
+}
+
+.fig__album {
+    position: absolute;
+    bottom: 4.3rem;
+    left: 50%;
+    z-index: 98;
+    background-color: #d8d0d0b2;
+    transform: translateX(-50%);
+    padding: .5rem;
+}
+
 /* footer */
-footer{
+footer {
     background-color: var(--backgd-yellow);
+    height: 100% ;
 }
+
+footer .container ul {
+    list-style: none;
+    padding: 2rem 0;
+}
+footer .container ul li{
+    padding: 1rem;
+}
+
 /* réutilisable */
-.bold{
+.bold {
     font-weight: 700;
     text-transform: uppercase;
 }
-.size__text{
+
+.size__text {
     font-size: 1rem;
 }
-.btn__yellow{
+
+.btn__yellow {
     font-weight: 700;
     font-size: 1rem;
     background-color: var(--clr-btn);
     color: #000;
     padding: .7rem 1rem;
     width: fit-content;
+    text-transform: capitalize;
+
 }
 
-.container{
+.container {
     width: 80%;
     margin: 4rem auto;
     text-align: center;
 }
-.relative{
-    position: relative;;
+
+.relative {
+    position: relative;
+    ;
 }
-.dispNone{
+
+.dispNone {
     display: none;
 }
-.img{
+
+.img {
     width: 100%;
 }
 
-@media (min-width: 768px){
-    main section #figure__hero{
+/* tablette */
+@media (min-width: 768px) {
+
+    /* header */
+
+
+
+
+
+    /* section hero */
+    main section #figure__hero {
         display: flex;
         flex-direction: row-reverse;
         max-width: 700px;
     }
+
     main section #figure__hero .dispNone {
         display: block;
+
+    }
+
+    main section #figure__hero figcaption {
+        flex-direction: column;
+    }
+
+    /* section media */
+    main #section__media .container ul {
+        display: flex;
+    }
+
+    main #section__artist #artist__card {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    main #section__news #news__content {
+        display: flex;
+        gap: 1rem;
+    }
+
+
+}
+/* desktop */
+@media (min-width: 1028px) {
+    header #navIcon {
+        display: none;
+    }
+
+    header #menuOpen {
+        background-color: #00000000;
+        position: static;
         
     }
-    main section #figure__hero figcaption{
-        flex-direction: column;
+    #menuOpen ul {
+        display: flex;
+        gap: .7rem;
+    }
+
+    main #section__media .container ul li a i {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #section__discography {
+        display:flex ;
+        gap: 2rem;
+        justify-content: center;
+        padding: 3rem 0;
+    }
+    .fab{
+        width: fit-content;
+        font-size: 1rem;
+    }
+    .dispNone {
+        display: block;
     }
 }
